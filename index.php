@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Login</title>
-    <link rel="stylesheet" href="../css/login_styles.css">
+    <link rel="stylesheet" href="css/login_styles.css"> <!-- Ruta relativa ajustada -->
 </head>
 <body>
     <div class="container">
@@ -11,7 +11,7 @@
         <?php
         session_start();
         if (isset($_SESSION['error_message'])) {
-            echo '<p class="error">' . $_SESSION['error_message'] . '</p>';
+            echo '<p class="error">' . htmlspecialchars($_SESSION['error_message']) . '</p>'; // Evita inyección de código
             unset($_SESSION['error_message']);
         }
         ?>
@@ -29,8 +29,12 @@
         </form>
         
         <div class="links"> 
-            <p>¿No tienes una cuenta? <a href="register.php">Regístrate aquí</a></p>
-            <p>¿Olvidaste tu contraseña? <a href="reset_password.php">Restablecer contraseña</a></p> 
+            <p>¿No tienes una cuenta? 
+                <a href="/register.php">Regístrate aquí</a> <!-- Usa una ruta absoluta -->
+            </p>
+            <p>¿Olvidaste tu contraseña? 
+                <a href="/reset_password.php">Restablecer contraseña</a> <!-- Usa una ruta absoluta -->
+            </p> 
         </div>
     </div>
 
