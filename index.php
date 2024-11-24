@@ -15,7 +15,7 @@
             unset($_SESSION['error_message']);
         }
         ?>
-        <form action="../controllers/login_process.php" method="post">
+        <form action="login_process.php" method="post">
             <label for="username">Usuario:</label>
             <input type="text" name="username" id="username" required>
             
