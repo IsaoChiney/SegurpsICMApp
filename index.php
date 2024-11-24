@@ -29,7 +29,7 @@
         </form>
         
         <div class="links"> 
-            <p>¿No tienes una cuenta? <a href="register.php">Regístrate aquí</a></p>
+            <p>¿No tienes una cuenta? <a href="/home/site/wwwroot/Views/register.php">Regístrate aquí</a></p>
             <p>¿Olvidaste tu contraseña? <a href="reset_password.php">Restablecer contraseña</a></p> 
         </div>
     </div>
